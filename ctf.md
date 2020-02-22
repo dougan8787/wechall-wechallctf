@@ -17,7 +17,7 @@
 <pre><code>PHP code
 $filename = 'pages/'.(isset($_GET["file"])?$_GET["file"]:"welcome").'.html';
 include $filename;
-<h3>把原本index.php?file=new先改成?file=solution.php得知路徑不同，加上../../solution.php，結果報錯是因為後面有.html的格式加進來變成../../solution.php.html為了防止它加進來後面加上%00空字符</h3>
+把原本index.php?file=new先改成?file=solution.php得知路徑不同，加上../../solution.php，結果報錯是因為後面有.html的格式加進來變成../../solution.php.html為了防止它加進來後面加上%00空字符
 </code><pre>
 
 
