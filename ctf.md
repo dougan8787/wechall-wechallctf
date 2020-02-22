@@ -1,13 +1,13 @@
-<h4>Training: Get Sourced</h4>
+<h2>Training: Get Sourced</h2>
  <pre><code>Look Sourcecode get password:html_sourcecode</code></pre>
  
-<h4>Training: Stegano I</h4>
+<h2>Training: Stegano I</h2>
 <pre><code>TextEd Look Stegano I.bmp get passwd:steganoI</code></pre>
 
-<h4>Training: WWW-Robots</h4>
+<h2>Training: WWW-Robots</h2>
 <pre><code>www.wechall.net/robots.txt</code></pre>
 
-<h4>Training: ASCII</h4>
+<h2>Training: ASCII</h2>
 <pre><code>Decimal (84, 104, 101, 32, 115, 111, 108, 117, 116, 105, 111, 110, 32, 105, 115, 58, 32, 115, 109, 104, 110, 102, 109, 97, 101, 109, 100, 100, 105) decode Ascii code</code></pre>
 
 <h2>Encodings: URL</h2>
