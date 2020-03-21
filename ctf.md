@@ -20,4 +20,22 @@ include $filename;
 把原本index.php?file=new先改成?file=solution.php得知路徑不同，加上../../solution.php，結果報錯是因為後面有.html的格式加進來變成../../solution.php.html為了防止它加進來後面加上%00空字符
 </code><pre>
 
+<h2>PHP 0817</h2>
+<pre><code>PHP code
+<?php
+if (isset($_GET['which']))
+{
+        $which = $_GET['which'];
+        switch ($which)        {
+        case 0:
+        case 1:
+        case 2:
+                require_once $which.'.php';                break;
+        default:
+                echo GWF_HTML::error('PHP-0817', 'Hacker NoNoNo!', false);
+                break;
+        }}
+?>
+因switch非嚴格匹配，所以0與非數字開頭的字符串進行==比較時總是ture，因此我們提交solution，必然會執行require_once。
+</code></pre>
 
