@@ -50,3 +50,14 @@ if (isset($_GET['which']))
 }
 因上列程式碼判斷$login[0]===admin就可以成功繞過登入，可是上述又說$login=$_POST['username']所以不能用admin #來繞過，但是我們可以通過全域變數來取代他舊版是默認開啟的，所以只要在後面加上?login[0]=admin就可通過。
 </code></pre>
+
+<h2>Limited Access</h2>
+<pre><code>
+  AuthUserFile .htpasswd
+  AuthGroupFile /dev/null
+  AuthName "Authorization Required for the Limited Access Challenge"
+  AuthType Basic
+  <Limit GET>require valid-user
+  </Limit>
+  上述所寫，限制了get請求，所以就用post解決這個題目。
+</code></pre>
