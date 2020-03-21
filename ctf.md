@@ -25,7 +25,7 @@ include $filename;
 if (isset($_GET['which']))
 {
         $which = $_GET['which'];
-        switch ($which)        {
+        switch ($which){
         case 0:
         case 1:
         case 2:
