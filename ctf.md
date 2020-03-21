@@ -21,7 +21,7 @@ include $filename;
 </code><pre>
 
 <h2>PHP 0817</h2>
-<pre><code><h4>PHP code
+<pre><code>PHP code
 if (isset($_GET['which']))
 {
         $which = $_GET['which'];
@@ -35,5 +35,5 @@ if (isset($_GET['which']))
                 break;
         }}
 因switch非嚴格匹配，所以0與非數字開頭的字符串進行==比較時總是ture，因此我們提交solution，必然會執行require_once。
-</h4></code></pre>
+</code></pre>
 
