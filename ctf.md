@@ -37,3 +37,16 @@ if (isset($_GET['which']))
 因switch非嚴格匹配，所以0與非數字開頭的字符串進行==比較時總是ture，因此我們提交solution，必然會執行require_once。
 </code></pre>
 
+<h2>Training: Register Globals</h2>
+<pre><code>
+13-# EMULATE REGISTER GLOBALS = ON
+28-$login = array($_POST['username'], (int)$row['level']);
+ 
+   if (isset($login))
+{
+        echo GWF_HTML::message('Register Globals', $chall->lang('msg_welcome_back', array(htmlspecialchars($login[0]), htmlspecialchars($login[1]))));
+        if (strtolower($login[0]) === 'admin') {                $chall->onChallengeSolved(GWF_Session::getUserID());
+        }
+}
+因上列程式碼判斷$login[0]===admin就可以成功繞過登入，可是上述又說$login=$_POST['username']所以不能用admin #來繞過，但是我們可以通過全御變數來取代他舊版是默認開啟的，所以只要在後面加上?login[0]=admin就可通過。
+</code></pre>
