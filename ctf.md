@@ -48,5 +48,5 @@ if (isset($_GET['which']))
         if (strtolower($login[0]) === 'admin') {                $chall->onChallengeSolved(GWF_Session::getUserID());
         }
 }
-因上列程式碼判斷$login[0]===admin就可以成功繞過登入，可是上述又說$login=$_POST['username']所以不能用admin #來繞過，但是我們可以通過全御變數來取代他舊版是默認開啟的，所以只要在後面加上?login[0]=admin就可通過。
+因上列程式碼判斷$login[0]===admin就可以成功繞過登入，可是上述又說$login=$_POST['username']所以不能用admin #來繞過，但是我們可以通過全域變數來取代他舊版是默認開啟的，所以只要在後面加上?login[0]=admin就可通過。
 </code></pre>
