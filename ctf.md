@@ -22,7 +22,6 @@ include $filename;
 
 <h2>PHP 0817</h2>
 <pre><code>PHP code
-<?php
 if (isset($_GET['which']))
 {
         $which = $_GET['which'];
@@ -35,7 +34,6 @@ if (isset($_GET['which']))
                 echo GWF_HTML::error('PHP-0817', 'Hacker NoNoNo!', false);
                 break;
         }}
-?>
 因switch非嚴格匹配，所以0與非數字開頭的字符串進行==比較時總是ture，因此我們提交solution，必然會執行require_once。
 </code></pre>
 
